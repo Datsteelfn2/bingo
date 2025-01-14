@@ -5,7 +5,9 @@ my2d_list=[[random.randint(0,90),random.randint(0,90),random.randint(0,90)],
            [random.randint(0,90),random.randint(0,90),random.randint(0,90)]]
 def card():
     for row in my2d_list:
-        print(row)
+        for item in row:
+            print(f"{item:^5}", end=' | ')
+        print()
 card()
 while True:
     guess=int(input("Guess a number:> "))
